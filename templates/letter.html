@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Carta</title>
+    <style>
+        * {
+            border: none;
+            margin:0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container{
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding-top: 26px;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .background {
+            background-image: url("{{ url_for('static', filename='images/background/background.png') }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .title {
+            height: 12rem;
+            padding-top: 8rem;
+        }
+
+        .de {
+            padding-top: 5rem;
+            display:flex;
+            flex-direction:row;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .para {
+            display:flex;
+            flex-direction:row;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .depara-image {
+            height: 1.5rem;
+        }
+
+
+        @font-face {
+        font-family: 'dsa';
+        src: url('/static/fonts/Domaine Sans Text Bold.otf') format('opentype');
+        }
+
+        .depara-container{
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-family: 'dsa', sans-serif;
+            color: #44493b;
+            text-transform: uppercase;
+        }
+
+        .frase {
+            margin-top: 6rem;
+            height: 30rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container background">
+    <img class="title" src="{{ url_for('static', filename='images/title_dia_das_maes_v01.png') }}">
+
+    <div class="de">
+        <h1>de:</h1>
+        <h1>{{de}}</h1>
+    </div>
+
+    <div class="para">
+        <h1>para:</h1>
+        <h1>{{para}}</h1>
+    </div>
+
+    <img class="frase" src="{{imagem_src}}">
+</div>
+</body>
+</html>
