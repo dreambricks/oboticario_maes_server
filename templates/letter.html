@@ -31,7 +31,7 @@
         }
 
         .background {
-            background-image: url("{{ url_for('static', filename='images/background/background.png') }}");
+            background-image: url("{{ url_for('static', filename='images/background/background2.png') }}");
             background-size: cover;
             background-repeat: no-repeat;
             position: relative;
@@ -59,6 +59,13 @@
 
         .depara-image {
             height: 1.5rem;
+        }
+
+        .logo{
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            padding-top:28rem;
         }
 
 
@@ -99,6 +106,9 @@
     </div>
 
     <img class="frase" src="{{imagem_src}}">
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/logo.png') }}">
+    </div>
 </div>
 </body>
 </html>
